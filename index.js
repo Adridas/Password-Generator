@@ -8,6 +8,7 @@ let length = 9;
 let split = Math.floor(length / 4)
 console.log(split)
 
+// create random 8 letters password
 
 passwordBtn.addEventListener ("click", function() {
     let password = [];
@@ -31,16 +32,20 @@ passwordBtn.addEventListener ("click", function() {
             
 })
 
+// Create copy function for the app
 
-// function generatePassword(length) {
-//     if (isNaN(length)) return "Please enter a valid number";
-//     else if (length < 8 || length > 20){
-//         return `The password length should be between 8 and 20 characters`;
-//         }else{
-//             let result = [];
-//             for (let i=0;i<length/lowerCase.length;i++){
-//                 result = result.concat(lowerCase);
-            
-//         }
-// }
+function myFunction() {
+    let copyText = passwordElm.textContent;
+    navigator.clipboard.writeText(copyText);
+   
+    let tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied: " + copyText;
+  }
+  
+  function outFunc() {
+    let tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+  }
+
+
 

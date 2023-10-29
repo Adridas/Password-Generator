@@ -7,10 +7,23 @@
             <h1>Password Generator</h1>
             <h2>Never use insecure Password</h2> 
             <button id="generate-psw">Generate Password</button>
-            <p id="password" class="password-elm"></p>
+            <div class="password-fields">
+                <p id="password" class="password-elm"></p>
+              <!-- <button class="butt"><img src="click.gif" alt="copy password"><span class="tooltiptext" id="myTooltip">Copy to clipboard</span></button> -->
+              <div class="tooltip">
+                <button class="butt"  onclick="myFunction()" onmouseout="outFunc()"><img src="click.gif" alt="copy password">
+                  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                  
+                  </button>
+                </div>
+            </div>
+              
+                        
         </div>
         
        
     </body>
     <script src="/index.js"></script>
 </html>
+
+
